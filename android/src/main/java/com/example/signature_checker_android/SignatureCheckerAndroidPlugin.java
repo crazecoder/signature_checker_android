@@ -60,9 +60,6 @@ public class SignatureCheckerAndroidPlugin implements MethodCallHandler {
 
                         @Override
                         public void doNotAllow(@NotNull PiracyCheckerError piracyCheckerError, @Nullable PirateApp pirateApp) {
-                            Log.e("SignatureCheckerAndroidPlugin",piracyCheckerError.toString());
-                            if(pirateApp!=null)
-                            Log.e("SignatureCheckerAndroidPlugin",pirateApp.getName()+":----:"+pirateApp.getType().name());
                             result.success(false);
                         }
                     })
