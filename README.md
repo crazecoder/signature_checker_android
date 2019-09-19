@@ -1,14 +1,20 @@
 # signature_checker_android
 
-A new flutter plugin project.
+A new flutter plugin project for check android app signature base on [PiracyChecker](https://github.com/javiersantos/PiracyChecker), It may help you verify the use of pirate apps.
 
 ## Getting Started
-
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+```yaml
+dependencies:
+  signature_checker_android:
+    git:
+      url: git://github.com/crazecoder/signature_checker_android.git
+```
+method support
+```dart
+SignatureCheckerAndroid.getApkSignature();
+SignatureCheckerAndroid.verifyInstallerId();
+SignatureCheckerAndroid.verifySignature();
+SignatureCheckerAndroid.verifyUnauthorizedApps();
+SignatureCheckerAndroid.verifyDebug();
+SignatureCheckerAndroid.verifyEmulator();
+```
