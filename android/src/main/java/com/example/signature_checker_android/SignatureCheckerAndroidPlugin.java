@@ -3,22 +3,16 @@ package com.example.signature_checker_android;
 import android.app.Activity;
 
 import com.github.javiersantos.piracychecker.PiracyChecker;
-import com.github.javiersantos.piracychecker.callbacks.AllowCallback;
 import com.github.javiersantos.piracychecker.callbacks.PiracyCheckerCallback;
-import com.github.javiersantos.piracychecker.enums.Display;
 import com.github.javiersantos.piracychecker.enums.InstallerID;
 import com.github.javiersantos.piracychecker.enums.PiracyCheckerError;
 import com.github.javiersantos.piracychecker.enums.PirateApp;
 import com.github.javiersantos.piracychecker.utils.LibraryUtilsKt;
 
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
-
 
 import java.util.ArrayList;
 import java.util.List;
 
-import io.flutter.Log;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
@@ -59,7 +53,7 @@ public class SignatureCheckerAndroidPlugin implements MethodCallHandler {
                         }
 
                         @Override
-                        public void doNotAllow(@NotNull PiracyCheckerError piracyCheckerError, @Nullable PirateApp pirateApp) {
+                        public void doNotAllow(PiracyCheckerError piracyCheckerError, PirateApp pirateApp) {
                             result.success(false);
                         }
                     })
@@ -85,7 +79,7 @@ public class SignatureCheckerAndroidPlugin implements MethodCallHandler {
                         }
 
                         @Override
-                        public void doNotAllow(@NotNull PiracyCheckerError piracyCheckerError, @Nullable PirateApp pirateApp) {
+                        public void doNotAllow(PiracyCheckerError piracyCheckerError, PirateApp pirateApp) {
                             result.success(false);
                         }
                     })
@@ -100,7 +94,7 @@ public class SignatureCheckerAndroidPlugin implements MethodCallHandler {
                         }
 
                         @Override
-                        public void doNotAllow(@NotNull PiracyCheckerError piracyCheckerError, @Nullable PirateApp pirateApp) {
+                        public void doNotAllow(PiracyCheckerError piracyCheckerError, PirateApp pirateApp) {
                             result.success(false);
                         }
                     })
@@ -115,7 +109,7 @@ public class SignatureCheckerAndroidPlugin implements MethodCallHandler {
                         }
 
                         @Override
-                        public void doNotAllow(@NotNull PiracyCheckerError piracyCheckerError, @Nullable PirateApp pirateApp) {
+                        public void doNotAllow(PiracyCheckerError piracyCheckerError, PirateApp pirateApp) {
                             result.success(false);
                         }
                     })
@@ -130,7 +124,7 @@ public class SignatureCheckerAndroidPlugin implements MethodCallHandler {
                         }
 
                         @Override
-                        public void doNotAllow(@NotNull PiracyCheckerError piracyCheckerError, @Nullable PirateApp pirateApp) {
+                        public void doNotAllow(PiracyCheckerError piracyCheckerError, PirateApp pirateApp) {
                             result.success(false);
                         }
                     })
@@ -145,7 +139,7 @@ public class SignatureCheckerAndroidPlugin implements MethodCallHandler {
                         }
 
                         @Override
-                        public void doNotAllow(@NotNull PiracyCheckerError piracyCheckerError, @Nullable PirateApp pirateApp) {
+                        public void doNotAllow(PiracyCheckerError piracyCheckerError, PirateApp pirateApp) {
                             result.success(false);
                         }
                     })
