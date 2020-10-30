@@ -36,6 +36,6 @@ android {
     }
 }
 dependencies {
-    implementation 'com.github.javiersantos:PiracyChecker:1.2.6'
+    implementation 'com.github.javiersantos:PiracyChecker:1.2.7'
     implementation 'com.google.android.material:material:1.0.0'
 }
