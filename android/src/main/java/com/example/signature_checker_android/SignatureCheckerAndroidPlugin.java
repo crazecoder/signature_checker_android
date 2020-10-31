@@ -40,12 +40,12 @@ public class SignatureCheckerAndroidPlugin implements MethodCallHandler {
     @Override
     public void onMethodCall(MethodCall call, final Result result) {
         if (call.method.equals("getApkSignature")) {
-            String signature = LibraryUtilsKt.getApkSignature(activity);
+            String signature = LibraryUtilsKt.getApkSignatures(activity)[0];
             result.success(signature);
         } else if (call.method.equals("verifySignature")) {
             String signature = call.argument("signature");
             new PiracyChecker(activity)
-                    .enableSigningCertificate(signature)
+                    .enableSigningCertificates(signature)
                     .callback(new PiracyCheckerCallback() {
                         @Override
                         public void allow() {
