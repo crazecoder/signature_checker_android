@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
-
-import 'package:flutter/services.dart';
 import 'package:signature_checker_android/signature_checker_android.dart';
 
 void main() => runApp(MyApp());
@@ -36,9 +33,9 @@ class _MyAppState extends State<MyApp> {
           children: <Widget>[
             Text('signature info: $_signature'),
             Text('result: $_result'),
-            FlatButton(
+            MaterialButton(
               onPressed: () {
-                SignatureCheckerAndroid.verifyInstallerId().then((_b){
+                SignatureCheckerAndroid.verifyInstallerId().then((_b) {
                   setState(() {
                     this._result = "verifyInstallerId=$_b";
                   });
@@ -46,9 +43,9 @@ class _MyAppState extends State<MyApp> {
               },
               child: Text("verifyInstallerId"),
             ),
-            FlatButton(
+            MaterialButton(
               onPressed: () {
-                SignatureCheckerAndroid.verifySignature("478yYkKAQF+KST8y4ATKvHkYibo=").then((_b){
+                SignatureCheckerAndroid.verifySignature("478yYkKAQF+KST8y4ATKvHkYibo=").then((_b) {
                   setState(() {
                     this._result = "verifySignature=$_b";
                   });
@@ -56,9 +53,9 @@ class _MyAppState extends State<MyApp> {
               },
               child: Text("verifySignature"),
             ),
-            FlatButton(
+            MaterialButton(
               onPressed: () {
-                SignatureCheckerAndroid.verifyUnauthorizedApps().then((_b){
+                SignatureCheckerAndroid.verifyUnauthorizedApps().then((_b) {
                   setState(() {
                     this._result = "verifyUnauthorizedApps=$_b";
                   });
@@ -66,9 +63,9 @@ class _MyAppState extends State<MyApp> {
               },
               child: Text("verifyUnauthorizedApps"),
             ),
-            FlatButton(
+            MaterialButton(
               onPressed: () {
-                SignatureCheckerAndroid.verifyStores().then((_b){
+                SignatureCheckerAndroid.verifyStores().then((_b) {
                   setState(() {
                     this._result = "verifyStores=$_b";
                   });
@@ -76,9 +73,9 @@ class _MyAppState extends State<MyApp> {
               },
               child: Text("verifyStores"),
             ),
-            FlatButton(
+            MaterialButton(
               onPressed: () {
-                SignatureCheckerAndroid.verifyDebug().then((_b){
+                SignatureCheckerAndroid.verifyDebug().then((_b) {
                   setState(() {
                     this._result = "verifyDebug=$_b";
                   });
@@ -86,9 +83,9 @@ class _MyAppState extends State<MyApp> {
               },
               child: Text("verifyDebug"),
             ),
-            FlatButton(
+            MaterialButton(
               onPressed: () {
-                SignatureCheckerAndroid.verifyEmulator().then((_b){
+                SignatureCheckerAndroid.verifyEmulator().then((_b) {
                   setState(() {
                     this._result = "verifyEmulator=$_b";
                   });
